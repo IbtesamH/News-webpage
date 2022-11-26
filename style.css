@@ -1,0 +1,312 @@
+/* general styling */
+
+*, *::before, *::after {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+}
+
+image {
+    max-width: 100%;
+}
+
+
+/* header styling */
+header {
+    margin: 4em 0 4em 0;
+    display: flex;   
+}
+
+.logo {
+    margin-left: 0;
+}
+
+.drop-menu-container {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav {
+    margin-right: 0;
+}
+
+li {
+    display: inline-block;
+    margin-left: 2em;
+    padding: 5px;
+}
+
+li:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+/* main content styling */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin-bottom: 0;
+}
+
+.main-content {
+    grid-row: 1 /span 2;
+    grid-column: 1 /span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    grid-gap: 2em;
+}
+
+.main-image {
+    grid-row: 1 /span 1;
+    grid-column: 1 /span 2;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-heading {
+    font-size: 2em;
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+    line-height: 1;
+    height: 100%;
+    padding-top: .5em;
+    width: 100%;
+}
+
+.main-info {
+    line-height: 1.5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button {
+    padding: 1em 3em;
+    margin-left: 0;
+    text-transform: uppercase;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    border: none;
+}
+
+.button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+
+.side-info-container {
+    background-color: hsl(240, 100%, 5%);
+    grid-row: 1 /span 2;
+    grid-column: 3 /span 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-heading {
+    font-size: 3em;
+    color: hsl(35, 77%, 62%);
+    width: 90%;
+    margin-left: .5em;
+    margin-top: .5em;
+}
+
+.side-info {
+    padding-bottom: 3em;
+    width: 90%;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    margin: 1em;
+}
+
+.side-info h3 {
+    color:hsl(36, 100%, 99%);
+    margin-bottom: .5em;
+}
+
+.side-info h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+div:last-child {
+    border-bottom: none;
+}
+
+
+
+.card {
+    display: flex;
+    height: 12em;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-image {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+}
+.card-info {
+    width: 60%;
+    height: 100%;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.card-number {
+    color: hsl(233, 8%, 79%);
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.card-title {
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+
+
+.card-title:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.card-one {
+    grid-column: 1 /span 1;
+    grid-row: 3 /span 1;
+}
+
+
+.card-two {
+    grid-column: 2 /span 1;
+    grid-row: 3 /span 1;
+}
+
+.attribution {
+    margin-bottom: 2em;
+}
+/*--------------------------- MEDIA QUERIES--------------------------------*/
+
+@media only screen and (max-width: 800px) {
+
+    .nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 10%;
+    }
+
+    .menu-icon:hover {
+        cursor: pointer;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 80vh;
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+    }
+
+    .main-content {
+        grid: none;
+        display: block;
+    }
+
+    .main-heading {
+        margin-bottom: .5em;
+    }
+
+    .button{
+        margin-top: 1.5em;
+        margin-bottom: 4em;
+    }
+
+    .card-container {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 3em;
+    }
+
+    .drop-menu-container {
+        background-color: hsl(36, 100%, 99%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        display: none;
+    }
+
+    .menu-close {
+        position: absolute;
+        right: 0;
+        margin: 1em 1em;
+    }
+
+    .menu-close:hover {
+        cursor: pointer;
+    }
+
+    .menu-items {
+        margin-top: 3em;
+        margin-left: .5em;
+        font-size: 2em;
+    }
+
+    .item {
+        margin-bottom: 1em;
+    }
+
+    .item:hover {
+        cursor: pointer;
+        color: hsl(5, 85%, 63%);
+    }
+
+    .card-one {
+        margin-top: 2em;
+        margin-left: 0;
+    }
+}
+
+
+
+
+
